@@ -1,0 +1,57 @@
+.user-list {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.user-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-item div {
+  flex: 1;
+}
+
+.assign-course {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add space between elements */
+}
+
+.assign-course select {
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+button.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+button.update-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+button.update-btn:hover {
+  background-color: #0056b3;
+}

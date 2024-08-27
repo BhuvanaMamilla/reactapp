@@ -1,0 +1,95 @@
+.courses {
+  padding: 20px;
+}
+
+.course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #ddd; /* Added border */
+}
+
+.course-card img.course-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.course-card h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.course-card p {
+  color: #555;
+  margin: 10px 0 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 5px; /* Set the distance between buttons to 5px */
+}
+
+.course-card button {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.course-card button:hover {
+  background-color: #d32f2f;
+}
+
+.update-btn {
+  background-color: #4CAF50;
+}
+
+.update-btn:hover {
+  background-color: #45a049;
+}
+
+.add-btn {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: darkgreen;
+}
+.add-btn-update {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
