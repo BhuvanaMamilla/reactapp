@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/AdminRegister.css";
+import "../css/AdminRegister.css"; // Adjust the import based on your file structure
 
 const CourseAdd = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +20,9 @@ const CourseAdd = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8085/api/courses/", {
+      // Use REACT_APP_API_URL environment variable if defined, otherwise use the default EC2 instance URL
+      const API_URL = process.env.REACT_APP_API_URL || "http://ec2-34-205-17-143.compute-1.amazonaws.com:8085";
+      const response = await fetch(`${API_URL}/api/courses/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,13 +34,15 @@ const CourseAdd = () => {
         throw new Error("Network response was not ok");
       }
 
-      const result = await response.json();
+      await response.json();
       alert("Course added successfully");
+
       // Clear the form
       setFormData({
         courseName: "",
         courseDescription: "",
       });
+
       navigate("/dashboard");
     } catch (error) {
       console.error("There was an error adding the course!", error);
