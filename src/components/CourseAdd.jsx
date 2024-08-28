@@ -9,6 +9,7 @@ const CourseAdd = () => {
   });
   const navigate = useNavigate();
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,11 +18,12 @@ const CourseAdd = () => {
     });
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Use REACT_APP_API_URL environment variable if defined, otherwise use the default EC2 instance URL
-      const API_URL = process.env.REACT_APP_API_URL || "http://ec2-34-205-17-143.compute-1.amazonaws.com:8085";
+      // Use environment variable or default to EC2 instance URL
+      const API_URL = process.env.REACT_APP_API_URL || "http://34.205.17.143:8080";
       const response = await fetch(`${API_URL}/api/courses/`, {
         method: "POST",
         headers: {
@@ -31,7 +33,9 @@ const CourseAdd = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        // Handle errors more gracefully
+        const errorData = await response.json();
+        throw new Error(`Error: ${response.status} - ${errorData.message}`);
       }
 
       await response.json();
@@ -43,10 +47,11 @@ const CourseAdd = () => {
         courseDescription: "",
       });
 
+      // Navigate to dashboard
       navigate("/dashboard");
     } catch (error) {
       console.error("There was an error adding the course!", error);
-      alert("Failed to add course");
+      alert("Failed to add course. Please try again.");
     }
   };
 
