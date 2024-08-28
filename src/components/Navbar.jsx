@@ -4,7 +4,7 @@ import "../css/Navbar.css";
 const Navbar = ({ onRegisterClick, onLoginClick }) => {
   return (
     <nav className="navbar">
-      <div className="logo">Mouni Educational Instutions</div>
+      <div className="logo">Educational Instutions</div>
       <ul className="nav-links">
         <li>
           <button className="nav-button" onClick={onLoginClick}>

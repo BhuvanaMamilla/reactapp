@@ -23,7 +23,7 @@ const CourseAdd = () => {
     e.preventDefault();
     try {
       // Use environment variable or default to EC2 instance URL
-      const API_URL = process.env.REACT_APP_API_URL || "http://34.205.17.143:8080";
+      const API_URL = process.env.REACT_APP_API_URL || "http://34.205.17.143:8082";
       const response = await fetch(`${API_URL}/api/courses/`, {
         method: "POST",
         headers: {

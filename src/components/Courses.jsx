@@ -13,7 +13,7 @@ const Courses = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:8085/api/courses/");
+      const response = await axios.get("http://34.205.17.143:8082/api/courses/");
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching courses:", error);
@@ -24,7 +24,7 @@ const Courses = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8085/api/courses/${id}`
+        `http://34.205.17.143:8082/api/courses/${id}`
       );
       if (response.status === 200) {
         alert("Course deleted successfully");

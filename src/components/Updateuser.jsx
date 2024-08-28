@@ -21,7 +21,7 @@ const Updateuser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let apiUrl = "http://localhost:8085/api/students/";
+      let apiUrl = "http://34.205.17.143:8082/api/students/";
       let method = "POST";
 
       // Check if there's an email in the formData to determine if it's an update

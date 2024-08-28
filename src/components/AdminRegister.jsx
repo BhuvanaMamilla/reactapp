@@ -21,7 +21,7 @@ const AdminRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8085/api/students/", {
+      const response = await fetch("http://34.205.17.143:8082/api/students/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

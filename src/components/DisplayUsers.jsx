@@ -12,7 +12,7 @@ const DisplayUsers = ({ setView }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8085/api/students/");
+      const response = await axios.get("http://34.205.17.143:8082/api/students/");
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -22,7 +22,7 @@ const DisplayUsers = ({ setView }) => {
   const handleDelete = async (email) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8085/api/students/${email}`
+        `http://34.205.17.143:8082/api/students/${email}`
       );
       if (response.status === 200) {
         alert("User deleted successfully");

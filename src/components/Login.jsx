@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8085/api/students/${formData.email}`
+        `http://34.205.17.143:8082/api/students/${formData.email}`
       );
 
       if (!response.ok) {
