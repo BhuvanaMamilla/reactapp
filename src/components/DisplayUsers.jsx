@@ -12,7 +12,7 @@ const DisplayUsers = ({ setView }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://34.205.17.143:8082/api/students/");
+      const response = await axios.get("http://52.53.155.231/api/students/");
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
